@@ -1,22 +1,22 @@
 ## Docker Torque
 
-#### Introduction
+### Introduction
 
-This image runs the Torque scheduler and a single worker on a Ubuntu host. One user is provided for submission of jobs. --> This is from https://github.com/neilav/docker-torque
+This image runs the Torque scheduler and a single worker on a Ubuntu host. One user is provided for submission of jobs. Code available [here.](https://github.com/neilav/docker-torque)
 
-I have included Andre Marquand work for nispat --> https://github.com/amarquand/nispat
+I have included Andre Marquand work for nispat. Code available [here.](https://github.com/amarquand/nispat)
 
-#### Pull
+### Pull
 `docker pull noemigl/nispat_normativemodelling`
 
-#### Build
+### Build
 `docker build -t noemigl/nispat_normativemodelling .`
 
-#### Run the docker with a link to you machine where the data is placed (-v argument). The "data" folder must contain files: covariates_allpatients.txt, covariates_HC.txt, features_allpatients.txt, features_HC.txt
+### Run the docker with a link to you machine where the data is placed (-v argument). The "data" folder must contain files: covariates_allpatients.txt, covariates_HC.txt, features_allpatients.txt, features_HC.txt
 
 `docker run -v /path/to/the/data/dir:/mnt/data -h master --privileged -it noemigl/nispat_normativemodelling bash`
 
-#### Once within the docker
+### Once within the docker
 ###### change to user "batchuser"
 `su batchuser`
 
